@@ -1,0 +1,31 @@
+[package]
+name = "trnamapqrecal"
+version = "0.1.0"
+edition = "2021"
+authors = ["Arno Velds <a.velds@nki.nl>"]
+description = "Software to recalibrate and quanitfy Oxford Nanopore RNA004 tRNA-seq data"
+readme = "README.md"
+license = "MIT"
+keywords = ["command-line-utilities" ,"science::bioinformatics::sequence-analysis"]
+publish = false
+
+[dependencies]
+anyhow = "1.0.86"
+atoi = "2.0.0"
+clap = { version = "4.5.5", features = ["derive"] }
+crossbeam-channel = "0.5.13"
+indexmap = "2.2.6"
+log = "0.4.22"
+noodles-bam = "0.68.0"
+noodles-fasta = "0.44.0"
+noodles-sam = "0.65.0"
+simple_logger = "5.0.0"
+triple_accel = "0.4.0"
+
+[[bin]]
+name = "trnamapqrecal"
+path = "src/main.rs"
+
+[[bin]]
+name = "bwamapbam"
+path = "src/bambwa.rs"
